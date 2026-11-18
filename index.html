@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L’Oréal Beauty Assistant</title>
+    <meta
+      name="description"
+      content="Get friendly beauty product and routine recommendations from the L’Oréal Beauty Assistant."
+    />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -19,27 +23,52 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <img
+          class="site-logo"
+          src="img/loreal-logo.png"
+          alt="L’Oréal"
+          width="180"
+        />
+        <p class="eyebrow">YOUR PERSONAL BEAUTY COMPANION</p>
+        <h1 class="site-title">Discover your beauty routine</h1>
+        <p class="site-intro">
+          Explore skincare, makeup, haircare, and fragrance with a little help
+          from AI.
+        </p>
       </header>
 
       <!------- Chat Area ------->
       <main>
         <section class="chatbox">
-          <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
+          <div class="chat-heading">
+            <div>
+              <h2>Beauty assistant</h2>
+              <p>Here to help you find your next favorite</p>
+            </div>
+            <span class="chat-tag">BEAUTY CHAT</span>
           </div>
 
+          <div
+            id="chatWindow"
+            class="chat-window"
+            role="log"
+            aria-label="Chat conversation"
+            aria-live="polite"
+            aria-relevant="additions"
+          ></div>
+
           <form id="chatForm" class="chat-form">
-            <label for="userInput" class="visually-hidden">Message</label>
+            <label for="userInput" class="visually-hidden">Ask a beauty question</label>
             <input
               id="userInput"
               name="userInput"
               type="text"
-              placeholder="Ask me about products or routines…"
+              placeholder="Ask about products or routines…"
+              maxlength="4000"
               autocomplete="off"
               required
             />
-            <button type="submit" id="sendBtn">
+            <button type="submit" id="sendBtn" aria-label="Send message">
               <span class="material-icons">send</span>
               <span class="visually-hidden">Send</span>
             </button>
@@ -49,13 +78,10 @@
 
       <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
-        <nav>
-          <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
+        <p>Beauty advice, thoughtfully delivered.</p>
+        <p class="disclaimer">
+          Educational demo; not affiliated with or endorsed by L’Oréal.
+        </p>
       </footer>
     </div>
 
